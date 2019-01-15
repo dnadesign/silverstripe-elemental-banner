@@ -1,0 +1,7 @@
+---
+name: elemental-carbon-hero-banner
+---
+DNADesign\Elemental\Models\ElementHeroBanner:
+  styles:
+    default : Default
+    hero : Hero
