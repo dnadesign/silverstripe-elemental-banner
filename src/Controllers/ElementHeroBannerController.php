@@ -10,6 +10,6 @@ class ElementHeroBannerController extends ElementController
   {
     parent::init();
 
-    Requirements::css('dnadesign/silverstripe-elemental-carbon-hero-banner:client/css/elemental-carbon-hero-banner.css');
+    Requirements::css('gmlnchv/silverstripe-elemental-banner:client/css/elemental-carbon-hero-banner.css');
   }
 }
