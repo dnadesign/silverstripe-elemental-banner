@@ -23,7 +23,7 @@
         }
     },
     "extra": {
-        "installer-name": "silverstripe-elemental-carbon-hero-banner",
+        "installer-name": "silverstripe-elemental-banner",
         "expose": [
             "client"
         ]
