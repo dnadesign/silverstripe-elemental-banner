@@ -1,5 +1,5 @@
 {
-    "name": "gmlnchv/silverstripe-elemental-banner",
+    "name": "dnadesign/silverstripe-elemental-banner",
     "description": "A hero banner with responsive image and optional title, content and link",
     "type": "silverstripe-vendormodule",
     "keywords": [
