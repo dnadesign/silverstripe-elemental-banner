@@ -1,31 +1,33 @@
 <?php
 
-namespace DNADesign\Elemental\Models;
+namespace DNADesign\ElementalBanner\Models;
 
 use SilverStripe\Forms\LiteralField;
 use SilverStripe\Forms\TextareaField;
 use Silverstripe\Forms\DropdownField;
+use DNADesign\Elemental\Models\BaseElement;
 use SilverShop\HasOneField\HasOneButtonField;
 use DNADesign\Images\Models\MultipleSizeImage;
-use DNADesign\Elemental\Controllers\ElementHeroBannerController;
+use DNADesign\ElementalBanner\Controllers\ElementBannerController;
 use gorriecoe\Link\Models\Link;
 
-class ElementHeroBanner extends BaseElement
+class ElementBanner extends BaseElement
 {
-  private static $table_name = 'ElementHeroBanner';
+  private static $table_name = 'DNADesign_ElementBanner';
 
-  private static $singular_name = 'hero banner';
+  private static $singular_name = 'banner';
 
-  private static $plural_name = 'hero banners';
+  private static $plural_name = 'banners';
 
   private static $description = 'Full width image with optional title';
 
-  private static $controller_class = ElementHeroBannerController::class;
+  private static $icon = 'font-icon-block-banner';
+
+  private static $controller_class = ElementBannerController::class;
 
   private static $db = [
-    'TitleLevel' => "Enum('h1, h2, h3, h4, h5, h6')",
-    'Content' => 'HTMLText',
-    'TextPosition' => "Enum('Left, Center, Right')",
+    'Content' => 'Text',
+    'TextAlignment' => "Enum('Left, Center, Right')",
   ];
 
   private static $has_one = [
@@ -41,12 +43,8 @@ class ElementHeroBanner extends BaseElement
   {
     $fields = parent::getCMSFields();
 
-    $position = $fields->dataFieldByName('TextPosition');
-    $position->setDescription('Text is centred on small devices. Position affects only wide screens.');
-
     // Need to be able to add line break in the title
-    $title = TextareaField::create('Title', 'Title');
-    $fields->replaceField('Title', $title);
+    $fields->replaceField('Title', TextareaField::create('Title', 'Title')->setRows(2));
 
     // Content
     $content = $fields->dataFieldByname('Content');
@@ -78,8 +76,12 @@ class ElementHeroBanner extends BaseElement
     }
   }
 
+  public function getType() {
+    return "Banner";
+  }
+
   public function getSimpleClassName()
   {
-    return 'element-hero-banner';
+    return 'element-banner';
   }
 }
