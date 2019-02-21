@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A hero banner element with support for art directed responsive images, optionally lazyloaded.
+A hero banner element with support for art-directed responsive images.
 
 ## Requirements
 
@@ -13,7 +13,7 @@ A hero banner element with support for art directed responsive images, optionall
 ## Installation
 
 ```bash
-composer require dnadesign/silverstripe-elemental-carbon-hero-banner
+composer require dnadesign/silverstripe-elemental-banner
 ```
 
 ## CSS
