@@ -11,7 +11,7 @@
     "require": {
         "silverstripe/vendor-plugin": "^1.0",
         "dnadesign/silverstripe-elemental": "^3",
-        "dnadesign/silverstripe-lazyloaded-image": "0.2.0",
+        "dnadesign/silverstripe-lazyloaded-image": "^0.3.0",
         "gorriecoe/silverstripe-link": "^1.2.4",
         "silvershop/silverstripe-hasonefield": "^2.1"
     },
