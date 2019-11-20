@@ -10,7 +10,7 @@
     ],
     "require": {
         "silverstripe/vendor-plugin": "^1.0",
-        "dnadesign/silverstripe-elemental": "^3",
+        "dnadesign/silverstripe-elemental": "^4",
         "dnadesign/silverstripe-lazyloaded-image": "^0.5.0",
         "gorriecoe/silverstripe-link": "^1.2.4",
         "silvershop/silverstripe-hasonefield": "^3"
